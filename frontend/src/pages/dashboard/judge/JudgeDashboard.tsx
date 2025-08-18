@@ -148,7 +148,7 @@ const JudgeDashboard: React.FC = () => {
                 assignedEvents.map((event) => (
                   <motion.div
                     key={event.id}
-                    className="bg-gray-900/30 p-4 rounded-lg border border-neonPurple/30 hover:border-neonGreen/50 transition-all duration-300 hover:shadow-neon-green"
+                    className="bg-gray-900/30 p-4 rounded-lg border border-neonPurple/30 hover:border-neonPurple transition-all duration-300 hover:shadow-neon-hover"
                     whileHover={{ scale: 1.02 }}
                   >
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">

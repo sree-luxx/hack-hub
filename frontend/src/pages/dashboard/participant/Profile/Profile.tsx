@@ -131,7 +131,7 @@ const Profile: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Profile Form */}
         <div className="lg:col-span-2">
-          <div className="neon-card-green p-6">
+          <div className="neon-card p-6">
             <h2 className="text-2xl font-orbitron font-semibold text-neonPurple mb-6">
               Personal Information
             </h2>
@@ -216,7 +216,7 @@ const Profile: React.FC = () => {
               <div className="flex space-x-4">
                 <button
                   type="submit"
-                  className="neon-button-green flex items-center space-x-2 px-6 py-3"
+                  className="neon-button flex items-center space-x-2 px-6 py-3"
                 >
                   <Save className="h-4 w-4" />
                   <span>Save Changes</span>
@@ -238,7 +238,7 @@ const Profile: React.FC = () => {
         {/* Profile Picture & Stats */}
         <div className="space-y-6">
           {/* Profile Picture */}
-          <div className="neon-card-green p-6 text-center">
+          <div className="neon-card p-6 text-center">
             <div className="h-32 w-32 mx-auto mb-4 rounded-full bg-neonPurple/20 border-4 border-neonGreen flex items-center justify-center">
               <User className="h-16 w-16 text-neonGreen" />
             </div>
@@ -249,7 +249,7 @@ const Profile: React.FC = () => {
           </div>
 
           {/* Stats */}
-          <div className="neon-card-green p-6">
+          <div className="neon-card p-6">
             <h3 className="text-lg font-orbitron font-semibold text-neonPurple mb-4">
               Your Stats
             </h3>
@@ -272,7 +272,7 @@ const Profile: React.FC = () => {
       </div>
 
       {/* Past Submissions */}
-      <div className="neon-card-green p-6">
+      <div className="neon-card p-6">
         <h2 className="text-2xl font-orbitron font-semibold text-neonPurple mb-6">
           Submission History
         </h2>
@@ -318,7 +318,7 @@ const Profile: React.FC = () => {
 
       {/* Certificates */}
       {certificates.length > 0 && (
-        <div className="neon-card-green p-6">
+        <div className="neon-card p-6">
           <h2 className="text-2xl font-orbitron font-semibold text-neonPurple mb-6">
             Certificates & Achievements
           </h2>
@@ -359,7 +359,7 @@ const Profile: React.FC = () => {
                   </button>
                   <button
                     onClick={() => handleCertificateDownload(certificate)}
-                    className="flex items-center space-x-1 px-4 py-2 neon-button-green text-sm"
+                    className="flex items-center space-x-1 px-4 py-2 neon-button text-sm"
                   >
                     <Download className="h-3 w-3" />
                     <span>Download</span>
@@ -487,7 +487,7 @@ const Profile: React.FC = () => {
             
             <button
               onClick={() => handleCertificateDownload(selectedCertificate)}
-              className="neon-button-green w-full flex items-center justify-center space-x-2"
+              className="neon-button w-full flex items-center justify-center space-x-2"
             >
               <Download className="h-4 w-4" />
               <span>Download Certificate</span>

@@ -25,15 +25,12 @@ export const Navbar: React.FC = () => {
             <Link to="/leaderboard" className="text-gray-300 hover:text-neon-purple transition-colors">
               Leaderboard
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-neon-purple transition-colors">
+            <Link to="/" className="text-gray-300 hover:text-neon-purple transition-colors">
               About
             </Link>
             
             {user ? (
               <div className="flex items-center space-x-4">
-                <Link to="/dashboard" className="text-gray-300 hover:text-neon-purple transition-colors">
-                  Dashboard
-                </Link>
                 <div className="flex items-center space-x-2 text-gray-300">
                   <User className="w-4 h-4" />
                   <span>{user.name}</span>
@@ -85,7 +82,7 @@ export const Navbar: React.FC = () => {
               Leaderboard
             </Link>
             <Link
-              to="/about"
+              to="/"
               className="block px-3 py-2 text-gray-300 hover:text-neon-purple"
               onClick={() => setIsOpen(false)}
             >
@@ -94,13 +91,6 @@ export const Navbar: React.FC = () => {
             
             {user ? (
               <>
-                <Link
-                  to="/dashboard"
-                  className="block px-3 py-2 text-gray-300 hover:text-neon-purple"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Dashboard
-                </Link>
                 <div className="px-3 py-2 text-gray-300">
                   Welcome, {user.name}
                 </div>

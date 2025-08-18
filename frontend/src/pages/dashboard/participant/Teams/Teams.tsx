@@ -139,7 +139,7 @@ const Teams: React.FC = () => {
       >
         {/* Current Team Tab */}
         {activeTab === 'current' && (
-          <div className="neon-card-green p-6">
+          <div className="neon-card p-6">
             {currentTeam ? (
               <div className="space-y-6">
                 <div className="flex items-start justify-between">
@@ -164,7 +164,7 @@ const Teams: React.FC = () => {
                   </div>
                   <button
                     onClick={() => setShowInviteModal(true)}
-                    className="neon-button-green flex items-center space-x-2"
+                    className="neon-button flex items-center space-x-2"
                   >
                     <Mail className="h-4 w-4" />
                     <span>Invite Member</span>
@@ -235,7 +235,7 @@ const Teams: React.FC = () => {
                 <div className="flex justify-center space-x-4">
                   <button
                     onClick={() => setActiveTab('create')}
-                    className="neon-button-green"
+                    className="neon-button"
                   >
                     Create Team
                   </button>
@@ -253,7 +253,7 @@ const Teams: React.FC = () => {
 
         {/* Create Team Tab */}
         {activeTab === 'create' && (
-          <div className="neon-card-green p-6">
+          <div className="neon-card p-6">
             <h2 className="text-2xl font-orbitron font-semibold text-neonPurple mb-6">
               Create New Team
             </h2>
@@ -295,7 +295,7 @@ const Teams: React.FC = () => {
                 </select>
               </div>
 
-              <button type="submit" className="neon-button-green w-full py-3">
+              <button type="submit" className="neon-button w-full py-3">
                 Create Team
               </button>
             </form>
@@ -306,7 +306,7 @@ const Teams: React.FC = () => {
         {activeTab === 'join' && (
           <div className="space-y-6">
             {/* Join by Code */}
-            <div className="neon-card-green p-6">
+            <div className="neon-card p-6">
               <h2 className="text-xl font-orbitron font-semibold text-neonPurple mb-4">
                 Join Team by Code
               </h2>
@@ -316,14 +316,14 @@ const Teams: React.FC = () => {
                   placeholder="Enter team code"
                   className="flex-1 px-4 py-3 bg-darkBg border border-neonPurple/30 rounded-lg focus:border-neonPurple focus:ring-2 focus:ring-neonPurple/20 text-white"
                 />
-                <button className="neon-button-green px-6">
+                <button className="neon-button px-6">
                   Join Team
                 </button>
               </div>
             </div>
 
             {/* Open Teams */}
-            <div className="neon-card-green p-6">
+            <div className="neon-card p-6">
               <h2 className="text-xl font-orbitron font-semibold text-neonPurple mb-6">
                 Open Teams
               </h2>
@@ -349,7 +349,7 @@ const Teams: React.FC = () => {
                     </p>
                     <button
                       onClick={() => handleJoinTeam(team.id)}
-                      className="neon-button-green w-full"
+                      className="neon-button w-full"
                     >
                       Request to Join
                     </button>
@@ -408,7 +408,7 @@ const Teams: React.FC = () => {
                 >
                   Cancel
                 </button>
-                <button type="submit" className="flex-1 neon-button-green">
+                <button type="submit" className="flex-1 neon-button">
                   Send Invite
                 </button>
               </div>

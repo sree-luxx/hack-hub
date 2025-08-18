@@ -1,12 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Calendar, 
   Users, 
   Trophy, 
   Code, 
-  Globe, 
   Zap,
   ArrowRight,
   Star,
@@ -16,6 +15,7 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 
 export const Landing: React.FC = () => {
+  const location = useLocation();
   const mockEvents = [
     {
       id: '1',
@@ -68,6 +68,15 @@ export const Landing: React.FC = () => {
       description: 'Upload code, demos, and documentation with integrated GitHub support.'
     }
   ];
+
+  useEffect(() => {
+    if (location.pathname === '/events' || location.hash === '#events') {
+      const el = document.getElementById('events');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }, [location]);
 
   return (
     <div className="min-h-screen bg-black">
@@ -172,7 +181,7 @@ export const Landing: React.FC = () => {
       </section>
 
       {/* Featured Events */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/20">
+      <section id="events" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/20">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

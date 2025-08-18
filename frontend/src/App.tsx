@@ -92,7 +92,7 @@ function App() {
               <Route path="/" element={<Landing />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
-              <Route path="/events" element={<div>Events Page (TBD)</div>} />
+              <Route path="/events" element={<Landing />} />
               <Route path="/leaderboard" element={<div>Leaderboard Page (TBD)</div>} />
               <Route path="/about" element={<div>About Page (TBD)</div>} />
 

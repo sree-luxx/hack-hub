@@ -137,7 +137,7 @@ const Submissions: React.FC = () => {
       </div>
 
       {/* Submission Form */}
-      <div className="neon-card-green p-6">
+      <div className="neon-card p-6">
         <h2 className="text-2xl font-orbitron font-semibold text-neonPurple mb-6">
           Submit New Project
         </h2>
@@ -281,7 +281,7 @@ const Submissions: React.FC = () => {
           <button
             type="submit"
             disabled={uploadProgress > 0 && uploadProgress < 100}
-            className="neon-button-green w-full py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="neon-button w-full py-3 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {uploadProgress > 0 && uploadProgress < 100 ? (
               <span className="flex items-center justify-center space-x-2">
@@ -296,7 +296,7 @@ const Submissions: React.FC = () => {
       </div>
 
       {/* Past Submissions */}
-      <div className="neon-card-green p-6">
+      <div className="neon-card p-6">
         <h2 className="text-2xl font-orbitron font-semibold text-neonPurple mb-6">
           Past Submissions
         </h2>

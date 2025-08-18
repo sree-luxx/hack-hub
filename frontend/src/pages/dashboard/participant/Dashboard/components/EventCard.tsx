@@ -57,7 +57,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
-      className="bg-gray-900/30 border border-neonPurple/30 rounded-lg p-4 hover:border-neonGreen/50 transition-all duration-300 hover:shadow-neon-green cursor-pointer"
+      className="bg-gray-900/30 border border-neonPurple/30 rounded-lg p-4 hover:border-neonPurple transition-all duration-300 hover:shadow-neon-hover cursor-pointer"
       onClick={() => navigate(`/events/${event.id}`)}
     >
       <div className="flex items-start justify-between mb-3">
@@ -93,7 +93,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
             e.stopPropagation();
             navigate(`/events/${event.id}`);
           }}
-          className="neon-button-green text-sm px-4 py-2"
+          className="neon-button text-sm px-4 py-2"
         >
           View Details
         </button>
