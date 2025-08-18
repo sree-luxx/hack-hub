@@ -1,46 +1,40 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Home, 
-  Calendar, 
-  Users, 
-  FileText, 
-  MessageSquare, 
+import {
+  Home,
+  Calendar,
+  Users,
+  FileText,
+  MessageSquare,
   Settings,
   Plus,
-  Award,
-  BarChart3,
   Megaphone,
-  UserCheck
+  ClipboardList
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 
 const participantLinks = [
-  { to: '/dashboard', icon: Home, label: 'Home' },
-  { to: '/dashboard/events', icon: Calendar, label: 'Events' },
-  { to: '/dashboard/teams', icon: Users, label: 'Teams' },
-  { to: '/dashboard/submissions', icon: FileText, label: 'Submissions' },
-  { to: '/dashboard/qa', icon: MessageSquare, label: 'Q&A' },
-  { to: '/dashboard/profile', icon: Settings, label: 'Profile' },
+  { to: '/dashboard/participant', icon: Home, label: 'Home' },
+  { to: '/dashboard/participant/events', icon: Calendar, label: 'Events' },
+  { to: '/dashboard/participant/teams', icon: Users, label: 'Teams' },
+  { to: '/dashboard/participant/submissions', icon: FileText, label: 'Submissions' },
+  { to: '/dashboard/participant/announcements', icon: MessageSquare, label: 'Announcements' },
+  { to: '/dashboard/participant/profile', icon: Settings, label: 'Profile' },
 ];
 
 const organizerLinks = [
-  { to: '/dashboard', icon: Home, label: 'Home' },
-  { to: '/dashboard/create-event', icon: Plus, label: 'Create Event' },
-  { to: '/dashboard/manage-events', icon: Calendar, label: 'Manage Events' },
-  { to: '/dashboard/participants', icon: Users, label: 'Participants' },
-  { to: '/dashboard/judges', icon: UserCheck, label: 'Judges' },
-  { to: '/dashboard/announcements', icon: Megaphone, label: 'Announcements' },
-  { to: '/dashboard/analytics', icon: BarChart3, label: 'Analytics' },
-  { to: '/dashboard/profile', icon: Settings, label: 'Profile' },
+  { to: '/dashboard/organizer', icon: Home, label: 'Home' },
+  { to: '/dashboard/organizer/create-event', icon: Plus, label: 'Create Event' },
+  { to: '/dashboard/organizer/manage-events', icon: Calendar, label: 'Manage Events' },
+  { to: '/dashboard/organizer/announcements', icon: Megaphone, label: 'Announcements' },
+  { to: '/dashboard/organizer/profile', icon: Settings, label: 'Profile' },
 ];
 
 const judgeLinks = [
-  { to: '/dashboard', icon: Home, label: 'Home' },
-  { to: '/dashboard/events', icon: Calendar, label: 'Events' },
-  { to: '/dashboard/reviews', icon: Award, label: 'Reviews' },
-  { to: '/dashboard/feedback', icon: FileText, label: 'Feedback' },
-  { to: '/dashboard/profile', icon: Settings, label: 'Profile' },
+  { to: '/dashboard/judge', icon: Home, label: 'Home' },
+  { to: '/dashboard/judge/reviews', icon: ClipboardList, label: 'Project Reviews' },
+  { to: '/dashboard/judge/announcements', icon: Megaphone, label: 'Announcements' },
+  { to: '/dashboard/judge/profile', icon: Settings, label: 'Profile' },
 ];
 
 export const Sidebar: React.FC = () => {
